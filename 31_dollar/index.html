@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>31 Dollar</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			// Programmiere hier die Funktion calc(number)
+			function calc (euro){
+                var dollar = euro * 1.1356
+                var ausgabe = euro " Euro entsprechen " + dollar + " US-Dollar "
+                
+                return ausgabe;
+            
+            
+            }
+            
+			function clicked() {
+				var input = document.getElementById("idInput").value;
+				var output = calc(input);
+				document.getElementById("idOutput").innerHTML = output;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<h1>31 Dollar</h1>
+		Euro in Dollar: <input id="idInput" type="text" value="100"><br /><br />
+		<button onClick="clicked();">Berechne etwas!</button><br /><br />
+		<div id="idOutput">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>
