@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>32 Kelvin</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			// Programmiere hier die Funktion calc(number)
+            function calc(celsius) {
+                var ausgabe;
+                var kelvin;
+
+
+                celsius = parseFloat(celsius)
+                kelvin = celsius + 273.15
+
+
+
+                
+
+
+               if(celsius <20 ){
+                 ausgabe = ausgabe= "Es ist Kalt:";
+               } else {
+                   ausgabe= "Es ist warm.";
+               }
+            
+               ausgabe ="Die Temperatur von " + celsius + " Grad celsius entspricht der temperatur von  " + kelvin + " Grad Kelvin. " + ausgabe
+
+               return ausgabe;
+        
+            }
+			
+            	
+
+			function clicked() {
+				var input = document.getElementById("idInput").value;
+				var output = calc(input);
+				document.getElementById("idOutput").innerHTML = output;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<h1>32 Kelvin</h1>
+		Temperatur in Celsius: <input id="idInput" type="text" value="20"><br /><br />
+		<button onClick="clicked();">Berechne etwas!</button><br /><br />
+		<div id="idOutput">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>
